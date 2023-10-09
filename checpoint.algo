@@ -1,0 +1,30 @@
+ALGORITHM distinct
+VAR
+    ensemble1,ensemble2:entier
+BEGIN
+    def somme_elements_distincts(ensemble1, ensemble2):
+    # Créer un ensemble pour stocker les éléments distincts
+    ensemble_distinct = set()
+
+    # Parcourir tous les éléments de l'ensemble 1 et les ajouter à l'ensemble distinct
+    for element in ensemble1:
+        ensemble_distinct.add(element)
+
+    # Parcourir tous les éléments de l'ensemble 2 et les ajouter à l'ensemble distinct
+    for element in ensemble2:
+        ensemble_distinct.add(element)
+
+    # Calculer la somme des éléments distincts
+    somme = sum(ensemble_distinct)
+
+    return somme
+
+# Exemple d'utilisation
+ensemble1 = [3, 1, 7, 9]
+ensemble2 = [2, 4, 1, 9, 3]
+resultat = somme_elements_distincts(ensemble1, ensemble2)
+
+print(f"Ensemble 1 : {ensemble1}")
+print(f"Ensemble 2 : {ensemble2}")
+print(f"Somme des éléments distincts : {resultat}")
+END
